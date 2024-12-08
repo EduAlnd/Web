@@ -1,0 +1,213 @@
+.page{
+    background-color: rgb(231, 231, 231);
+    width: 1000px;
+    height: 1000px;
+    margin: 0 auto;
+}
+.sidebar {
+    background: linear-gradient(180deg,  blue 0% , rgb(43, 150, 238) 100%);
+    width: 350px;
+    height: 1000px;
+    margin: 0 0 250px 0;
+    color: aliceblue;
+    font-size: large;
+    border-radius: 0 100px 100px 0;
+}
+/* Definição dos setores*/
+#menu{
+    padding-top: 15px;
+    margin:0 0 25px 30px;
+    font-size: xx-large;
+}
+#drive{
+    position: relative;
+    height: 50px;
+    width: 250px;
+    align-content: center;
+    border-radius:  100px 0 0 100px;
+    padding-left: 70px;
+    margin:50px 0 15px 30px;
+}
+#computers{
+    position: relative;
+    height: 50px;
+    width: 250px;
+    align-content: center;
+    border-radius:  100px 0 0 100px;
+    padding-left: 70px;
+    margin:20px 0 15px 30px;
+}
+
+#shared{
+    position: relative;
+    height: 50px;
+    width: 250px;
+    align-content: center;
+    border-radius:  100px 0 0 100px;
+    padding-left: 70px;
+    margin:20px 0 15px 30px;
+}
+
+#starred{
+    position: relative;
+    height: 50px;
+    width: 250px;
+    align-content: center;
+    border-radius:  100px 0 0 100px;
+    padding-left: 70px;
+    margin:20px 0 15px 30px;
+}
+#trash{
+    position: relative;
+    height: 50px;
+    width: 250px;
+    align-content: center;
+    border-radius:  100px 0 0 100px;
+    padding-left: 70px;
+    margin:20px 0 15px 30px;
+}
+/*Before*/
+#drive:hover::before{
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    display: block;
+    top: -25px;
+    width: 255px;
+    height: 25px;
+    border-bottom-right-radius: 100px;
+    box-shadow: 0 10px 0 0 rgb(231, 231, 231);
+}
+
+#computers:hover::before{
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    display: block;
+    top: -25px;
+    width: 255px;
+    height: 25px;
+    border-bottom-right-radius: 100px;
+    box-shadow: 0 10px 0 0 rgb(231, 231, 231);
+}
+#shared:hover::before{
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    display: block;
+    top: -25px;
+    width: 255px;
+    height: 25px;
+    border-bottom-right-radius: 100px;
+    box-shadow: 0 10px 0 0 rgb(231, 231, 231);
+}
+#starred:hover::before{
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    display: block;
+    top: -25px;
+    width: 255px;
+    height: 25px;
+    border-bottom-right-radius: 100px;
+    box-shadow: 0 10px 0 0 rgb(231, 231, 231);
+}
+#trash:hover::before{
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    display: block;
+    top: -25px;
+    width: 255px;
+    height: 25px;
+    border-bottom-right-radius: 100px;
+    box-shadow: 0 10px 0 0 rgb(231, 231, 231);
+}
+/*After*/
+#drive:hover::after{
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    display: block;
+    top: 50px;
+    width: 255px;
+    height: 25px;
+    border-top-right-radius: 100px;
+    box-shadow: 0 -10px 0 0 rgb(231, 231, 231);
+}
+#computers:hover::after{
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    display: block;
+    top: 50px;
+    width: 255px;
+    height: 25px;
+    border-top-right-radius: 100px;
+    box-shadow: 0 -10px 0 0 rgb(231, 231, 231);
+}
+#shared:hover::after{
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    display: block;
+    top: 50px;
+    width: 255px;
+    height: 25px;
+    border-top-right-radius: 100px;
+    box-shadow: 0 -10px 0 0 rgb(231, 231, 231);
+}
+#starred:hover::after{
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    display: block;
+    top: 50px;
+    width: 255px;
+    height: 25px;
+    border-top-right-radius: 100px;
+    box-shadow: 0 -10px 0 0 rgb(231, 231, 231);
+}
+#trash:hover::after{
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    display: block;
+    top: 50px;
+    width: 255px;
+    height: 25px;
+    border-top-right-radius: 100px;
+    box-shadow: 0 -10px 0 0 rgb(231, 231, 231);
+}
+/* Animação*/
+#drive:hover{
+    background-color: rgb(231, 231, 231);
+    color: blue;
+
+}
+#computers:hover{
+    background-color: rgb(231, 231, 231);
+    color: blue;
+
+}
+
+#shared:hover{
+    background-color: rgb(231, 231, 231)
+    ;
+    color: blue;
+
+}
+
+#starred:hover{
+    background-color: rgb(231, 231, 231);
+    color: blue;
+
+}
+
+#trash:hover{
+    background-color: rgb(231, 231, 231);
+    color: blue;
+
+}
+
+

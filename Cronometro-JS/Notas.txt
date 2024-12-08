@@ -1,0 +1,35 @@
+.padStart() = Utilizado para "completar" uma string a partir do começo.
+Ex: let string = "Hello"
+let padString = string.padStart(7, '0')
+console.log(padString) // 00Hello
+
+setInterval() = executa um codigo em um determinado intervalo de tempo.
+Ex:
+let interval = 0
+const intervalo = setInterval(()=>{
+    console.log(interval)
+    interval+=10
+}, 100) // Vai ser executada a cada 100ms.
+
+clearInterval() = Para o setInterval.
+Ex:
+let interval = 0
+const intervalo = setInterval(()=>{
+    console.log(interval)
+    interval+=10
+    if(interval > 100){
+        clearInterval(intervalo)
+    }
+}, 100) // Quando intervalo for maior que 100 o setInterval para a execução.
+
+setTimeout() = Depois de um tempo x a função é executada.
+Ex:
+let interval = 0
+const intervalo = setInterval(()=>{
+    console.log(interval)
+    interval+=10
+}, 10)
+
+setTimeout(() => {
+    clearInterval(intervalo)
+}, 5000) //Apos 5 segundos o setInterval parará

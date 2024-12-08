@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronômetro</title>
+    <link rel="stylesheet" href="./style.css">
+    
+    <script src="./main.js" defer></script>
+</head>
+<body>
+    <div id="circle">
+        <div id="time">
+            <h4 id="hours">00</h4>
+            <p id="dots">:</p>
+            <h4 id="min">00</h4>
+            <h4 id="sec">00</h4>
+            <h6 id="milis">000</h6>
+        </div>
+        <div id="btns">
+            <div id="start">
+                <button id="startBtn" onclick="start()">Iniciar</button>
+                <button id="reset" onclick="reset()">Resetar</button>  
+            </div>
+            <div id="on">
+                <button id="note" onclick="note()">Marcar</button>
+                <button id="pause" onclick="pause()">Pausar</button>
+            </div>
+        </div>
+    </div>
+        <div id="card-list">
+            <div class="card">
+                <header>
+                    <p>1</p>
+                </header>
+                <main>
+                    <h4 id="card-hour">00</h4>
+                    <p id="card-dots">:</p>
+                    <h4 id="card-min">00</h4>
+                    <h4 id="card-sec">00</h4>
+                </main>
+            </div>
+        </div>
+</body>
+</html>
