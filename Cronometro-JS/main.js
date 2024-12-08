@@ -1,5 +1,3 @@
-let posi = 2
-let intervalo
 const cardList = document.getElementById('card-list')
 const hour = document.querySelector('#hours')
 const min = document.querySelector('#min')
@@ -9,28 +7,34 @@ const btns = document.querySelector('#start')
 const btnsOn = document.querySelector('#on')
 const startBtn = document.querySelector("#startBtn")
 
+let enumeracao = 1
+let intervalo
+let hours = 0
+let minutes = 0
+let seconds = 0
+let miliseconds = 0
+
 const start = () =>{
     btns.style.display = 'none'
     btnsOn.style.display = 'flex'
     intervalo = setInterval(()=>{
-        if(+milis.innerText === 1000){
-            milis.innerText= '000'
-            sec.innerText++
-            sec.innerText = (sec.innerText < 10) ? `0${sec.innerText}` : sec.innerText
+        miliseconds += 10
+        if(miliseconds === 1000){
+            miliseconds = 0
+            seconds++
         }
-        else if(+milis.innerText>= 0){
-            milis.innerText= parseInt(milis.innerText)+ 10
-            milis.innerText = (+milis.innerText < 100) ? milis.innerText.padStart(3, '0') : milis.innerText
+        if(seconds === 60){
+            seconds = 0
+            minutes++
         }
-        if(+sec.innerText=== 60){
-            sec.innerText = sec.padStart(2, "0")
-            min.innerText++
+        if(minutes === 60){
+            minutes = 0
+            hours++
         }
-        if(+min.innerText=== 60){
-            min.innerText = min.padStart(2, "0")
-            hour.innerText++
-        }
-        
+        hour.innerText = (hours<10) ? `0${hours}` : hours
+        min.innerText = (minutes<10) ? `0${minutes}` : minutes
+        sec.innerText = (seconds<10) ? `0${seconds}` : seconds
+        milis.innerText = (miliseconds<100) ? `${miliseconds}`.padStart(3, '0') : miliseconds
     }, 10)
     
 }
@@ -43,7 +47,7 @@ const note = ( ) =>{
     cardList.innerHTML += `
     <div class="card">
                 <header>
-                    <p>${posi}</p>
+                    <p>${enumeracao}</p>
                 </header>
                 <main>
                     <h4 id="card-hour">${hour.innerText}</h4>
@@ -53,7 +57,7 @@ const note = ( ) =>{
                 </main>
             </div>
     `
-    posi++;
+    enumeracao++;
 }
 const reset = ( ) =>{
     cardList.innerHTML = ' '
@@ -61,5 +65,10 @@ const reset = ( ) =>{
     min.innerText ='00'
     sec.innerText = '00'
     milis.innerText = '000'
-    posi = 1
+    intervalo
+    hours = 0
+    minutes = 0
+    seconds = 0
+    miliseconds = 0
+    enumeracao= 1
 }
