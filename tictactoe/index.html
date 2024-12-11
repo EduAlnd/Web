@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+     <title>Tic-Tac-Toe</title>
+    <script src="./main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <h2>TIC</h2>
+            <span>-</span>
+            <h2>TAC</h2>
+            <span>-</span>
+            <h2>TOE</h2>
+        </div>
+    </header>
+    <main>
+        <form onsubmit="start(event)">
+            <label for="Player"> Quem será o player 1?</label>
+            <select name="Player" id="Player">
+                <option value="x">x</option>
+                <option value="o">o</option>
+            </select>
+            <button>Começar</button>
+        </form>
+        <div id="jogo">
+            <div id="vez">
+                <h4>Está na vez do:</h4>
+                <div id="placar">
+                    <p id="p1">Player 1</p>
+                    <p id="p2">Player 2</p>
+                </div>
+            </div>
+            <div id="table">
+                <div id="box1" class="box" onclick="add(event)"></div>
+                <div id="box2" class="box" onclick="add(event)"></div>
+                <div id="box3" class="box" onclick="add(event)"></div>
+                <div id="box4" class="box" onclick="add(event)"></div>
+                <div id="box5" class="box" onclick="add(event)"></div>
+                <div id="box6" class="box" onclick="add(event)"></div>
+                <div id="box7" class="box" onclick="add(event)"></div>
+                <div id="box8" class="box" onclick="add(event)"></div>
+                <div id="box9" class="box" onclick="add(event)"></div>
+            </div>
+        </div>
+        <div id="winner">
+            <h3>Quem venceu foi o: <span></span></h3>
+        </div>
+        <button id="resetGame" onclick="reset()">Resetar</button>
+        
+    </main>
+
+</body>
+</html>
