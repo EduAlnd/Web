@@ -1,9 +1,10 @@
 const jogo = document.querySelector('#jogo')
 const resetGame = document.querySelector('#resetGame')
 const winnerDisplay = document.querySelector('#winner')
-const winner = document.querySelector('#winner span')
+const winner = document.querySelector('#winner h3')
 const player1Style = document.querySelector('#p1')
 const player2Style = document.querySelector('#p2')
+
 
 let player1
 let player2
@@ -28,14 +29,10 @@ const add = (event) => {
     if (turn === false) {
         jogada.innerText = player1
         player1Style.style.backgroundColor = 'transparent'
-        
         player2Style.style.backgroundColor = '#FB3640'
-        
-
     } else {
         jogada.innerText = player2
         player2Style.style.backgroundColor = 'transparent'
-        
         player1Style.style.backgroundColor = '#FB3640'
         
     }
@@ -70,6 +67,7 @@ const ganhou = () => {
         }
         else if (mat[0][l] === mat[1][l] && mat[0][l] === mat[2][l] && mat[0][l] != '') {
             win = true
+            temp = mat[0][l]
             console.log("venceu")
         }
     }
@@ -78,16 +76,18 @@ const ganhou = () => {
         winnerDisplay.style.display = 'flex'
         resetGame.style.display = 'flex'
         if(player1 === temp){
-            winner.innerText = 'Player 1'
+            winner.innerText = 'Vencedor: Player 1'
         }
         else{
-            winner.innerText = 'Player 2'
+            winner.innerText = 'Vencedor: Player 2'
         }
         aux++
         win = false
-        setTimeout(reset, 2000)
+        
     }
+    
     else{
+        
         for(let l = 1; l<3; l++){
             for(let c = 0; c<3; c++){
             if(mat[l][c] != ''){
@@ -95,12 +95,12 @@ const ganhou = () => {
             }
             }
         }
-        console.log(draw)
+        
         if(draw == 6 && aux==0){
-        const empate = winner.closest('h3')
-        empate.innerText = 'Empate'
+        winner.innerText = 'Empate'
         winnerDisplay.style.display = 'flex'
-        setTimeout(reset, 2000)
+        resetGame.style.display = 'flex'
+        
         } else{
             draw = 0
         }
@@ -108,16 +108,17 @@ const ganhou = () => {
 }
 
 function reset(){
-    turn = !turn
+    turn = false
     aux = 0
     draw = 0
+    player2Style.style.backgroundColor = 'transparent'
+    player1Style.style.backgroundColor = '#FB3640'
     winnerDisplay.style.display = 'none'
     jogo.style.display = 'none'
     resetGame.style.display = 'none'
-    winner.innerText = ''
     for(let l = 1; l<=9; l++){
         const box = document.querySelector(`#box${l}`)
         box.innerText = ''
     }
-   
+    
 }

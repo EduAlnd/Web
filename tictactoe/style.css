@@ -116,7 +116,7 @@ button:hover{
 
 
 #jogo{
-    display: flex;
+    display: none;
     flex-direction: column;
 }
 #table{
@@ -145,7 +145,7 @@ button:hover{
 }
 
 #winner{
-    display: flex;
+    display: none;
     margin: 0 auto;
     width: 600px;
     padding: 0 40px;
@@ -157,7 +157,7 @@ button:hover{
     font-size: 50px;
 }
 #resetGame{
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
