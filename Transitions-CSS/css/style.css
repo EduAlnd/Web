@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
+}
+
+header{
+    background-color: black;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 100px;
+    color: white;
+}
+.wrapper h1{
+    width: 190px;
+    margin: 10px auto;
+    font-size: 40px;
+}
+.wrapper h1 span{
+   color: #2452e8;
+}
+
+#tests{
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+#tests main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #3a4e91;
+    color: white;
+    font-size: 100px;
+    position: relative;
+}
+
+#card-test h3{
+    position: relative;
+    height: 150px;
+    z-index: 2;
+}
+#tests #card-test::after{
+    content: '';
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    background-color: transparent;
+    z-index: 1;
+    
+}
+aside{
+    background-color: #0d2c94;
+    width: 460px;
+    padding: 0 20px;
+    overflow-y: scroll;
+}
+
+aside h5{
+    color: white;
+    margin: 5px;
+    font-size: 40px;
+    justify-self: center;
+}
+aside p{
+    color: white;
+    width: 100%;
+    height: 40px;
+    font-size: 30px;
+    margin: 10px 0;
+    align-self: center;
+    padding-left: 10px;
+}
+#color, #transitions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+aside input, #delay{
+    margin: 5px 0;
+    border-radius: 20px;
+    padding: 0 5px;
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+}
+aside p:hover{
+    background-color: rgba(0, 0, 0, 0.548);
+    border-radius: 20px;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/main.js" defer></script>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <h1>Test <span>CSS</span></h1>
+        </div>
+    </header>
+    <main>
+        <section id="tests">
+            <main id="card-test">
+                <h3>Test CSS</h3>
+            </main>
+            <aside>
+                <div id="color">
+                    <h5>Color</h5>
+                        <input type="text" name="cardColor" id="cardColor" placeholder="Card color">
+                        <input type="text" name="textColor" id="textColor" placeholder="Text color">
+                </div>
+                <div id="transitions">
+                    <h5>Transitions</h5>
+                    <select name="delay" id="delay">
+                        <option value="0.25">0.25s</option>
+                        <option value="0.5">0.5s</option>
+                        <option value="0.75">0.75s</option>
+                        <option value="1.5">1.5s</option>
+                        <option value="1">1s</option>
+                        <option value="2">2s</option>
+                    </select>
+                    <p onclick="transitions(null)">Instant</p>
+                    <p onclick="transitions('ease')">Ease</p>
+                    <p onclick="transitions('ease-in')">Ease-In</p>
+                    <p onclick="transitions('ease-out')">Ease-Out</p>
+                    <p onclick="transitions('ease-in-out')">Ease-In-Out</p>
+                    <p onclick="transitions('cubic-bezier')">Cubic-Bezier</p>
+                </div>
+                <div id="transform">
+                    <h5>Transform</h5>
+                    <input type="number" min="0" max="360" id="number">
+                    <p onclick="transform('rotateX')">RotateX</p>
+                    <p onclick="transform('rotateZ')">RotateZ</p>
+                    <p onclick="transform('rotateY')">RotateY</p>
+                    <p onclick="transform('skewX')">SkewX</p>
+                    <p onclick="transform('skewY')">SkewY</p>
+                    <p onclick="transform('scale')">Scale</p>
+                    <p onclick="transform('scaleX')">ScaleX</p>
+                    <p onclick="transform('scaleY')">ScaleY</p>
+                    <p onclick="transform('translateX')">TranslateX</p>
+                    <p onclick="transform('translateY')">TranslateY</p>
+                </div>
+            </aside>
+        </section>
+    </main>
+</body>
+</html>
